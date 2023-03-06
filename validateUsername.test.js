@@ -31,3 +31,7 @@ test("return true for username > 6 < 30 characters, uppercase, lowercase and per
 test("return false for username > 6 < 30 characters, special characters", () => {
     expect(validateUsername("QW.ERTY#uiop/%$#@")).toBe(false)
 })
+
+test("return true for username > 6 < 30 characters, only periods", () => {
+    expect(validateUsername(".........")).toBe(true)
+})
